@@ -1,0 +1,323 @@
+.container-fluid {
+  // margin-bottom: 10rem;
+  background-color: #f7f0f0;
+  .my_experience {
+    .text_experience {
+      margin-top: 7rem;
+    }
+    p {
+      margin-bottom: 12rem;
+    }
+  }
+}
+
+.timeline-container {
+  position: relative;
+  //   overflow: hidden;
+  max-width: 1000px;
+}
+
+/* Glowing timeline center line */
+.timeline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(to bottom, #ff7a00, #ffb347);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.6);
+  //   transition: height 0.2s ease-out;
+  transition: top 0.5s ease-out, height 0.5s ease-out;
+}
+
+/* Small static top dot */
+.timeline-top-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #ff7a00;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #ffb347, 0 0 20px #ff7a00;
+  z-index: 2;
+}
+
+.timeline-glow {
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s ease-out, height 0.5s ease-out;
+}
+
+/* 1️⃣ Outer soft background halo */
+.timeline-glow-inner {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 140, 0, 0.25);
+  animation: haloExpand 3s infinite ease-in-out;
+  filter: blur(12px);
+}
+
+/* 2️⃣ Main bright orange core */
+.timeline-glow-core {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffb347, #ff7a00 80%);
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px rgba(255, 120, 0, 0.8), 0 0 30px rgba(255, 150, 0, 0.6),
+    0 0 60px rgba(255, 180, 0, 0.4);
+  z-index: 2;
+}
+
+/* 3️⃣ Moving pulse that expands like an energy wave */
+.timeline-glow-pulse {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 150, 0, 0.7) 0%,
+    rgba(255, 80, 0, 0.1) 80%
+  );
+  animation: pulseExplosion 3.6s ease-out infinite;
+  filter: blur(4px);
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+/* 💥 Soft wave expansion for the halo */
+@keyframes haloExpand {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* 💫 Glowing pulse wave like a bomb light */
+@keyframes pulseExplosion {
+  0% {
+    transform: scale(1);
+    opacity: 0.95;
+    filter: blur(2px);
+  }
+  /*  First strong wave */
+  20% {
+    transform: scale(2.5);
+    opacity: 0.5;
+    filter: blur(5px);
+  }
+  /*  Second smaller wave */
+  40% {
+    transform: scale(3.5);
+    opacity: 0.25;
+    filter: blur(8px);
+  }
+  /*  Last gentle ripple */
+  65% {
+    transform: scale(4.2);
+    opacity: 0.1;
+    filter: blur(12px);
+  }
+  /*  Dissolve & reset */
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    filter: blur(2px);
+  }
+}
+
+.timeline-glow-pulse.delay {
+  animation-delay: 1.8s;
+  opacity: 0.6;
+}
+/* Experience cards */
+.exp-card {
+  border-radius: 12px;
+  background: #fff;
+  position: relative;
+  z-index: 4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 123, 0, 0.3);
+}
+
+.text-orange {
+  color: #ff7a00;
+  font-weight: 600;
+  //  display: flex;
+  // align-items: center;
+}
+
+.tech-stack .badge {
+  background-color: #fff5e6;
+  color: #ff7a00;
+  font-weight: 600;
+  border-radius: 1.2rem;
+  margin: 5px;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 320px) {
+ .container-fluid {
+  // margin-bottom: 10rem;
+  background-color: #f7f0f0;
+  .my_experience {
+    .text_experience {
+      margin-top: 7rem;
+    }
+    .exp_text {
+      margin-bottom: 5rem;
+      font-size: 1rem !important;
+    }
+  }
+}
+}
+/* Small screen responsive tweaks */
+@media (max-width: 475px) {
+   .container-fluid {
+  // margin-bottom: 10rem;
+  background-color: #f7f0f0;
+  .my_experience {
+    .text_experience {
+      margin-top: 7rem;
+    }
+    .exp_text {
+      margin-bottom: 5rem;
+      font-size: 1rem !important;
+    }
+  }
+}
+  .timeline-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  /* Stack cards vertically */
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  /* Full width cards */
+  .exp-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  /* Hide left/right positioning */
+  [class*="col-5"],
+  [class*="col-7"] {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  /* Timeline line beside the card */
+  .timeline {
+    display: none;
+  }
+  .timeline-top-dot,
+  .timeline-glow {
+    display: none;
+  }
+  /* Font size adjustments */
+  .exp-card h4 {
+    font-size: 1.1rem;
+  }
+  .exp-card h6 {
+    font-size: 0.9rem;
+  }
+  .exp-card p {
+    font-size: 0.8rem;
+  }
+  .tech-stack .badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+  /* Adjust glow size for small screens */
+  .timeline-glow-inner {
+    width: 40px;
+    height: 40px;
+  }
+  .timeline-glow-core {
+    display: none;
+  }
+  .timeline-glow-pulse {
+    display: none;
+  }
+  .timeline-glow-pulse.delay {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  /* Timeline line beside the card */
+  .timeline {
+    display: none;
+  }
+  .timeline-top-dot,
+  .timeline-glow {
+    display: none;
+  }
+  /* Font size adjustments */
+  .exp-card h4 {
+    font-size: 1.1rem;
+  }
+  .exp-card h6 {
+    font-size: 0.9rem;
+  }
+  .exp-card p {
+    font-size: 0.8rem;
+  }
+  .tech-stack .badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+  /* Adjust glow size for small screens */
+  .timeline-glow-inner {
+    width: 40px;
+    height: 40px;
+  }
+  .timeline-glow-core {
+    display: none;
+  }
+
+  .timeline-glow-pulse {
+    display: none;
+  }
+  .timeline-glow-pulse.delay {
+    display: none;
+  }
+}
+
+.Core_main {
+  margin-top: 4rem;
+  background-color: #f7f0f0;
+  .core_1 {
+    margin-top: 4rem;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+}

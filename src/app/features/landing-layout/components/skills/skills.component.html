@@ -1,0 +1,199 @@
+<div class="container-fluid skill_section" style="font-family: 'Alevia', serif;">
+    <div class="row justify-content-center text-center row_1">
+        <div class="col-12">
+            <h1 class="fw-bold mb-3 display-5 text_skill" style="color: red;"><span class="my text-dark">My</span>
+                Skills</h1>
+            <div class="col-8 text-center m-auto">
+                <p class="text-secondary text-center fs-5 fw-semibold p_skill">
+                    A comprehensive overview of my technical expertise and the technologies I work with to build modern
+                    web applications
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- My Skills card start ============================= -->
+
+<div class="skills-root container py-5" style="font-family: 'Alevia', serif;">
+
+    <!-- filters -->
+    <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+        <div *ngFor="let cat of categories" class="category-chip-wrapper">
+            <button class="btn category-chip d-flex align-items-center gap-2"
+                [class.active]="activeCategory === cat.name" (click)="setCategory(cat.name)">
+                <i class="fa_icon" [class]="cat.icon"></i>
+                <span class="tech_name">{{ cat.name }}</span>
+                <span class="badge-count">{{ countByCategory(cat.name) }}</span>
+            </button>
+        </div>
+    </div>
+    <div class="text-center d-flex m-auto justify-content-center   align-items-center gap-2 skill_level">
+        <span class="me-0 sort">Sort by:</span>
+        <div class="btn-group my-2" role="group" aria-label="Sort">
+            <button class="btn sort-btn" [class.active]="sortBy==='name'" (click)="setSort('name')">Name</button>
+            <button class="btn sort-btn" [class.active]="sortBy==='level'" (click)="setSort('level')">Level</button>
+            <button class="btn sort-btn" [class.active]="sortBy==='experience'"
+                (click)="setSort('experience')">Experience</button>
+        </div>
+    </div>
+
+
+    <!-- header summary -->
+    <div class="text-center text-muted mb-3 skill_in">
+        Showing {{ filteredSkills.length }} skills in <strong class="text-dark">{{ activeCategory }}</strong>
+    </div>
+
+    <!-- cards grid -->
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3" *ngFor="let s of filteredSkills" [@bubbleAnimation]>
+            <div class="skill-card p-4 h-100 shadow-lg">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div class="icon-wrap">
+                        <div class="icon-bg">
+                            <i [class]="s.icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="level-pill text-muted">{{ s.level }}</div>
+                </div>
+
+                <h5 class="skill-title">{{ s.title }}</h5>
+                <div class="underline"></div>
+
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="meta small text-secondary">
+                        <div class="pro_yer"><i class="fa-solid fa-chart-line me-2 text-orange"></i>Proficiency</div>
+                        <div class="mt-2 pro_yer"><i class="fa-solid fa-calendar-days me-2 text-orange "></i>{{ s.years
+                            }} years exp.</div>
+                    </div>
+
+                    <div class="progress-circle">
+                        <!-- SVG circular progress -->
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                       a 15.9155 15.9155 0 0 1 0 31.831
+                       a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" [attr.stroke-dasharray]="s.proficiency + ', 100'" d="M18 2.0845
+                       a 15.9155 15.9155 0 0 1 0 31.831
+                       a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage fw-bold">{{ s.proficiency }}%</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-4" *ngIf="filteredSkills.length">
+            <button class="view-btn d-inline-flex align-items-center gap-2" (click)="toggleSkills()">
+                <span>{{ showAllSkills ? 'View Less Skills' : 'View More Skills' }}</span>
+                <i class="fa" [ngClass]="showAllSkills ? 'fa-eye-slash' : 'fa-eye'"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- My Skills card end ============================= -->
+
+
+<!-- Bring Table ================================ -->
+<div class="table_main" style="font-family: 'Alevia', serif;">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-3 table_row">
+            <div class="col-12">
+                <h1 class="fw-bold mb-3 table_1">What I Bring to the Table</h1>
+                <p class="text-secondary fs-5 text_table">
+                    My approach to development and the value I provide to projects
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 mb-4" *ngFor="let t of bring_table">
+                <div class="card p-3  table_card d-flex justify-content-center h-100 shadow-lg">
+                    <div class="body">
+                        <div class="text-center fa_right mb-2 fs-2">
+                            {{ t.icon }}
+                        </div>
+                        <p class="text-center title">
+                            <strong>{{ t.title }}</strong>
+                        </p>
+                        <p class="text-center">
+                            {{ t.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bring Table end================================ -->
+
+
+<!-- Bring learning start================================ -->
+
+<div class="learning" style="font-family: 'Alevia', serif;">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-3 learning_row">
+            <div class="col-12">
+                <h1 class="fw-bold mb-3 learning_1">My Learning Journey</h1>
+                <p class="text-secondary fs-5 text_learning">
+                    How I have developed my skills and continue to grow as a developer
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-5 col-lg-5 mb-4 d-flex justify-content-center "
+                *ngFor="let t of learning_journey">
+                <div
+                    class="card p-4 learning_card d-flex flex-column justify-content-center h-100 shadow-lg text-center w-100">
+                    <p class="title fw-bold learning_title">{{ t.title }}</p>
+                    <p>{{ t.description }}</p>
+
+                    <div class="mt-3">
+                        <span *ngFor="let skill of t.skills" class="badge learing_badge">
+                            {{ skill }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bring learning end================================ -->
+
+
+<!--  build start================================ -->
+<div class="build" style="font-family: 'Alevia', serif;">
+   <div class="container build-section">
+  <div class="row justify-content-center text-center mb-3 build_row">
+    <div class="col-12">
+      <h1 class="fw-bold mb-3 build_1 text-white">Let's Build Something Great</h1>
+      <div class="col-8 text-center m-auto">
+        <p class="text-white fs-5 text_build">
+          Ready to leverage my skills for your next project? I'm excited to bring my expertise to your
+          team and help create amazing solutions.
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
+        <!-- Start a Project Button -->
+        <button class="btn build-btn start-btn">
+          <i class="fa-solid fa-rocket me-2"></i> Start a Project
+        </button>
+
+        <!-- See My Work Button -->
+        <button class="btn build-btn work-btn">
+          <i class="fa-solid fa-folder-open me-2"></i> See My Work
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!--  build end================================ -->

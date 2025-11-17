@@ -1,0 +1,207 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss'],
+})
+export class ProjectsComponent {
+  searchTerm: string = '';
+  selectedTech: string = '';
+
+  isOpen = false;
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
+
+  selectTech(tech: string) {
+    this.selectedTech = tech;
+    this.isOpen = false;
+  }
+  fullscreenImages: string[] = [];
+  fullscreenModal: any;
+
+  openFullscreen(project: any) {
+    this.fullscreenImages = project.images;
+
+    const modal = new (window as any).bootstrap.Modal(
+      document.getElementById('fullscreenModal')
+    );
+    modal.show();
+  }
+  closeFullscreen() {
+    if (this.fullscreenModal) {
+      this.fullscreenModal.hide();
+    }
+  }
+  expandedDescription: any = {};
+
+  toggleDescription(id: number) {
+    this.expandedDescription[id] = !this.expandedDescription[id];
+  }
+  technologies = [
+    'HTML',
+    'CSS',
+    'SCSS',
+    'SASS',
+    'Bootstrap',
+    'Ionic',
+    'Angular',
+    'React',
+    'TypeScript',
+    'JavaScript',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+  ];
+  projects = [
+    {
+      id: 1,
+      name: 'Ever Stylish',
+      role: 'Frontend Developer',
+      description:
+        'Built a full-featured e-commerce platform with secure authentication, dynamic product browsing, seamless cart/checkout flow, and an admin panel for product and order management.',
+      techStack: [
+        'Angular',
+        'Bootstrap',
+        'SCSS',
+        'CSS',
+        'HTML',
+        'TypeScript',
+        'Node.js',
+        'Express.js',
+        'MongoDb',
+      ],
+      images: [
+        '../../../../../assets/images/everStylish/01.png',
+        '../../../../../assets/images/everStylish/03.png',
+        '../../../../../assets/images/everStylish/02.png',
+        '../../../../../assets/images/everStylish/04.png',
+      ],
+      codeLink: 'https://github.com/yourusername/hush-app',
+      liveDemo: 'https://everstylish.com/',
+    },
+    {
+      id: 2,
+      name: 'Punjabi Sahitya',
+      role: 'Frontend Developer',
+      description:
+        'It is a cultural and administrative portal that works as both an information hub for the Punjabi Sahitya Academy and a user-friendly system where the community can engage, access resources, and stay updated.',
+      techStack: ['React', 'Bootstrap', 'SCSS', 'SASS', 'CSS', 'HTML', 'PHP'],
+      images: [
+        '../../../../../assets/images/panjabiShita/04.png',
+        '../../../../../assets/images/panjabiShita/03.png',
+        '../../../../../assets/images/panjabiShita/01.png',
+        '../../../../../assets/images/panjabiShita/02.png',
+      ],
+      codeLink: 'https://github.com/yourusername/portfolio',
+      liveDemo: 'https://punjabi-sahitya-academy.web.app/',
+    },
+    {
+      id: 3,
+      name: 'IDMS',
+      role: 'Frontend Developer',
+      description:
+        'The IDMS (Integrated Data Management system / ERP-like system) project is an enterprise-level management platform that covers the end-to-end operations of a business. It brings multiple departments and processes into a single dashboard so that organizations can manage their entire workflow efficiently.',
+      techStack: ['Angular', 'Bootstrap', 'SCSS', 'CSS', 'HTML', 'TypeScript'],
+      images: [
+        '../../../../../assets/images/IDMS/01.png',
+        '../../../../../assets/images/IDMS/02.png',
+        '../../../../../assets/images/IDMS/03.png',
+        '../../../../../assets/images/IDMS/04.png',
+        '../../../../../assets/images/IDMS/05.png',
+        '../../../../../assets/images/IDMS/06.png',
+      ],
+      codeLink: 'https://github.com/yourusername/portfolio',
+      liveDemo: 'https://idms-vit.com/',
+    },
+    {
+      id: 4,
+      name: 'Shop & Customer App',
+      role: 'Full Stack Developer',
+      description:
+        'A centralized dashboard where the Super Admin creates businesses, manages catalogues, and assigns shops. It ensures complete control over categories, products, and shop onboarding.A dedicated platform for shop owners to manage catalogs, update stock, handle customer orders, and communicate with the Super Admin.A user-friendly shopping app where customers browse products, add to cart, manage addresses, and track their order status in real-time.',
+      techStack: [
+        'Angular',
+        'ionic',
+        'Bootstrap',
+        'SCSS',
+        'SASS',
+        'CSS',
+        'HTML',
+        'TypeScript',
+        'Node.js',
+        'Express.js',
+        'MongoDb',
+      ],
+      images: [
+        '../../../../../assets/images/shop_customer/customer/Untitled design.png',
+        '../../../../../assets/images/shop_customer/customer/Untitled design_02.png',
+        '../../../../../assets/images/shop_customer/customer/Untitled design_03.png',
+        '../../../../../assets/images/shop_customer/shop/shop_01.png',
+        '../../../../../assets/images/shop_customer/shop/shop_02.png',
+        '../../../../../assets/images/shop_customer/deshboard/deshboard01.png',
+        '../../../../../assets/images/shop_customer/deshboard/02.png',
+        '../../../../../assets/images/shop_customer/deshboard/03.png',
+        '../../../../../assets/images/shop_customer/deshboard/04.png',
+        '../../../../../assets/images/shop_customer/deshboard/05.png',
+        '../../../../../assets/images/shop_customer/deshboard/07.png',
+        '../../../../../assets/images/shop_customer/deshboard/08.png',
+      ],
+      codeLink: 'https://github.com/yourusername/portfolio',
+      liveDemo: 'https://janmrm.jankalyan.life/#/login',
+    },
+    {
+      id: 5,
+      name: 'Peacock Collective',
+      role: 'Full Stack Developer',
+      description:
+        'A fully responsive e-commerce web app built with Angular, SCSS, and Bootstrap featuring secure Razorpay payments, product search & filtering, a smooth cart-to-checkout flow, and real-time stock updates. Integrated REST APIs (Node.js + Express) with MongoDB for authentication, orders, and product management. Designed with modular, reusable Angular components for performance and scalability.',
+      techStack: [
+        'Angular',
+        'Bootstrap',
+        'SCSS',
+        'SASS',
+        'CSS',
+        'HTML',
+        'TypeScript',
+        'Node.js',
+        'Express.js',
+        'MongoDb',
+      ],
+      images: [
+        '../../../../../assets/images/peacocke/01.png',
+        '../../../../../assets/images/peacocke/login01.png',
+        '../../../../../assets/images/peacocke/02.png',
+        '../../../../../assets/images/peacocke/cart.png',
+        '../../../../../assets/images/peacocke/cart01.png',
+      ],
+      codeLink: 'https://github.com/yourusername/portfolio',
+      liveDemo: 'https://peacockcollective.in/home',
+    },
+  ];
+
+  get filteredProjects() {
+    return this.projects.filter((project) => {
+      const matchesSearch =
+        this.searchTerm.trim() === '' ||
+        project.role.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        project.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        project.description
+          .toLowerCase()
+          .includes(this.searchTerm.toLowerCase()) ||
+        project.techStack.some((tech) =>
+          tech.toLowerCase().includes(this.searchTerm.toLowerCase())
+        );
+
+      const matchesTech =
+        this.selectedTech === '' ||
+        project.techStack.some(
+          (tech) => tech.toLowerCase() === this.selectedTech.toLowerCase()
+        );
+
+      return matchesSearch && matchesTech;
+    });
+  }
+}

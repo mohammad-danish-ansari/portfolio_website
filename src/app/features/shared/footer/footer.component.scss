@@ -1,0 +1,66 @@
+.Contact_me{
+padding: 0.5rem;
+}
+.Contact_me:hover{
+  transition: color 0.4s ease;   
+   background-color: #ea580c;
+}
+
+/* 🌐 Quick Links Styling */
+.quick-links a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+   color: rgba(209 213 219);
+  text-decoration: none;
+  line-height: 2; /* adds a bit more vertical spacing */
+  transition: color 0.3s ease;
+}
+
+.quick-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: #ea580c; /* yellowish highlight */
+  text-decoration: underline;
+}
+
+.quick-links a:hover{
+  width: 100%;
+}
+
+.Services{
+display: inline-block;
+  position: relative;
+  color: rgba(209 213 219);
+  text-decoration: none;
+  line-height: 2; /* adds a bit more vertical spacing */
+  transition: color 0.3s ease;
+}
+/* 💬 Social Icons */
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: transparent;
+  border: 2px solid #ea580c;
+  transform: scale(1.1);
+  color: #ea580c !important;
+   transition: all 0.3s ease;
+}

@@ -1,0 +1,274 @@
+<div id="home"></div>
+<nav class="navbar navbar-expand-md navbar-light bg-transparent fixed-top p-0 m-0">
+  <div class="container-fluid d-flex justify-content-between align-items-center p-0 m-0 content_data">
+
+
+    <!-- <div class=" mx-0">
+      <p>Muk<span style="color: red; font-size: 2.5rem;">u</span>nda</p>
+       <img src="../../../../assets/logo/logo_2-removebg-preview (1).png" width="70rem" height="70rem" alt="">
+    </div> -->
+    <div class="logo-spin ms-2">
+      <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Base leaf (we will rotate this) -->
+        <defs>
+          <path id="leaf" d="
+      M100 100
+      Q100 20 150 60
+      Q100 100 100 100
+      Z" />
+        </defs>
+
+        <!-- 0° Top (dark blue) -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(0 100 100)" />
+
+        <!-- 45° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(45 100 100)" />
+
+        <!-- 90° -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(90 100 100)" />
+
+        <!-- 135° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(135 100 100)" />
+
+        <!-- 180° -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(180 100 100)" />
+
+        <!-- 225° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(225 100 100)" />
+
+        <!-- 270° -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(270 100 100)" />
+
+        <!-- 315° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(315 100 100)" />
+
+      </svg>
+
+
+
+
+    </div>
+
+
+
+
+    <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+      <ul class="navbar-nav gap-4">
+        <li class="nav-item"><a routerLink="/" routerLinkActive="active-link" (click)="scrollTo('home')"
+            [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active-link"
+            class="nav-link text-white hover-underline">Home</a></li>
+        <li class="nav-item"><a routerLink="/project" routerLinkActive="active-link" (click)="scrollTo('home')"
+            class="nav-link text-white hover-underline">Project</a>
+        </li>
+        <li class="nav-item"><a routerLink="/experience" routerLinkActive="active-link" (click)="scrollTo('home')"
+            class="nav-link text-white hover-underline">Experience</a></li>
+        <li class="nav-item"><a routerLinkActive="active-link" routerLink="/skill" (click)="scrollTo('home')"
+            class="nav-link text-white hover-underline">Skills</a>
+        </li>
+        <li class="nav-item"><a routerLink="/contact" routerLinkActive="active-link" (click)="scrollTo('home')"
+            class="nav-link text-white hover-underline ">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white resume-tooltip" href="../../../../assets/resume/Full_Stack_Developer_Resume.pdf"
+            download="Mohammad_Danish_Resume.pdf" ngbTooltip="📄 Download Resume" placement="bottom" container="body">
+            <i class="fa-solid fa-download me-2"></i>
+          </a>
+        </li>
+
+
+
+      </ul>
+    </div>
+    <div class="d-flex justify-content-between two_button">
+      <button class="me-4 position-relative d-flex justify-content-center align-items-center rounded-circle border-0"
+        style="
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent;
+    perspective: 1000px; 
+    outline: none;
+  " aria-label="Switch Theme" (click)="toggleTheme()">
+
+        <div class="position-relative d-flex justify-content-center align-items-center rounded-circle" [ngStyle]="{
+      transform: isDarkMode ? 'rotateY(180deg)' : 'rotateY(0deg)',
+      transition: 'transform 0.7s',
+      transformStyle: 'preserve-3d'
+    }">
+
+          <!-- ☀️ Light Side -->
+          <div class="position-absolute d-flex justify-content-center align-items-center rounded-circle" style="
+        backface-visibility: hidden;
+        background: linear-gradient(135deg, #ffa500, #ffb347, #ff8c00);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+        width: 36px;
+        height: 36px;
+      ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </div>
+
+          <!-- 🌙 Dark Side -->
+          <div class="position-absolute d-flex justify-content-center align-items-center rounded-circle" style="
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        background: linear-gradient(135deg, #343a40, #212529);
+        box-shadow: 0 0 10px rgba(173, 181, 189, 0.4);
+        width: 36px;
+        height: 36px;
+      ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="none" stroke="#dee2e6" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Subtle Glow -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle" style="
+      box-shadow: rgba(255, 193, 7, 0.4) 0px 0px 25px,
+                  rgba(255, 193, 7, 0.2) 0px 0px 50px;
+      pointer-events: none;
+    ">
+        </div>
+      </button>
+      <button class="navbar-toggler border-0 custom-toggler" type="button" aria-label="Toggle navigation"
+        (click)="openScrollableContent(longContent)">
+        <i class="fa-solid fa-bars fs-2 toggle"></i>
+      </button>
+    </div>
+
+
+  </div>
+</nav>
+
+<!--  Fullscreen Background Video -->
+<!-- <div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="../../../assets/vedio3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div> -->
+
+
+<ng-template #longContent let-modal class="custom-template">
+  <div class="modal-header pt-0 pb-0 ps-0 d" style=" font-family: 'Alevia', serif;">
+    <div class="logo-spin">
+      <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Base leaf (we will rotate this) -->
+        <defs>
+          <path id="leaf" d="
+      M100 100
+      Q100 20 150 60
+      Q100 100 100 100
+      Z" />
+        </defs>
+
+        <!-- 0° Top (dark blue) -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(0 100 100)" />
+
+        <!-- 45° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(45 100 100)" />
+
+        <!-- 90° -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(90 100 100)" />
+
+        <!-- 135° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(135 100 100)" />
+
+        <!-- 180° -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(180 100 100)" />
+
+        <!-- 225° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(225 100 100)" />
+
+        <!-- 270° -->
+        <use href="#leaf" fill="#0d2644" transform="rotate(270 100 100)" />
+
+        <!-- 315° -->
+        <use href="#leaf" fill="#fbb03b" transform="rotate(315 100 100)" />
+
+      </svg>
+
+    </div>
+   
+
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body" style=" font-family: 'Alevia', serif;">
+    <ul class="navbar-nav ">
+      <li class="nav-item border-bottom d-flex justify-content-between align-items-center"
+        (click)="navigateAndScroll('/', 'home', modal)">
+        <a class="nav-link text-dark d-flex align-items-center gap-2">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+        <div class="div">
+          <i class="fa-solid fa-angle-right text-black"></i>
+        </div>
+      </li>
+
+      <li class="nav-item border-bottom d-flex justify-content-between align-items-center"
+        (click)="navigateAndScroll('/project', 'home', modal)">
+        <a class="nav-link text-dark d-flex align-items-center gap-2">
+          <i class="fa-solid fa-diagram-project"></i> Project
+        </a>
+        <div class="div">
+          <i class="fa-solid fa-angle-right text-black"></i>
+        </div>
+      </li>
+
+      <li class="nav-item border-bottom d-flex justify-content-between align-items-center"
+        (click)="navigateAndScroll('/experience', 'home', modal)">
+        <a class="nav-link text-dark d-flex align-items-center gap-2">
+          <i class="fa-solid fa-briefcase"></i> Experience
+        </a>
+        <div class="div">
+          <i class="fa-solid fa-angle-right text-black"></i>
+        </div>
+      </li>
+
+      <li class="nav-item border-bottom d-flex justify-content-between align-items-center"
+        (click)="navigateAndScroll('/skill', 'home', modal)">
+        <a class="nav-link text-dark d-flex align-items-center gap-2">
+          <i class="fa-solid fa-code"></i> Skills
+        </a>
+        <div class="div">
+          <i class="fa-solid fa-angle-right text-black"></i>
+        </div>
+      </li>
+
+      <li class="nav-item border-bottom d-flex justify-content-between align-items-center"
+        (click)="navigateAndScroll('/contact', 'home', modal)">
+        <a class="nav-link text-dark d-flex align-items-center gap-2">
+          <i class="fa-solid fa-envelope"></i> Contact
+        </a>
+        <div class="div">
+          <i class="fa-solid fa-angle-right text-black"></i>
+        </div>
+      </li>
+
+      <li class="nav-item border-bottom">
+        <a class="nav-link text-white resume-tooltip" href="../../../../assets/resume/Full_Stack_Developer_Resume.pdf"
+          download="Mohammad_Danish_Resume.pdf" ngbTooltip="📄 Download Resume" placement="bottom"
+          tooltipClass="center-tooltip" container="body">
+          <i class="fa-solid fa-download me-2"></i>Download Resume
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div> -->
+</ng-template>

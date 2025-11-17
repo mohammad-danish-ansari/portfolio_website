@@ -1,0 +1,181 @@
+<div class="container-fluid pro_1 project_section" style="font-family: 'Alevia', serif;">
+    <div class="row justify-content-center text-center mb-2 my_project">
+        <div class="col-12 text-center mb-4">
+            <h1 class="fw-bold mb-3 display-5 text_project" style="color: red;"><span class="my text-dark">My</span>
+                Projects</h1>
+            <p class="text-secondary fs-5 text_pro">
+                A showcase of my work in web development, featuring modern technologies and innovative solutions
+            </p>
+
+            <!-- 🔍 Search and Filter -->
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4 flex-wrap search_sort ">
+                <!-- Search Box -->
+                <div class="input-group shadow-sm main_grop" style="width: 20rem; height: 3rem;">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search projects..."
+                        [(ngModel)]="searchTerm" />
+                </div>
+
+                <!-- Filter Dropdown -->
+                <div class="dropdown">
+
+                    <div class="dropdown btn_sort shadow-sm">
+                        <button
+                            class="dropbtn w-100 btn_sort_1 border rounded d-flex align-items-center justify-content-between"
+                            (click)="toggleDropdown()">
+                            <span><i class="fa-solid fa-filter me-2"></i>{{ selectedTech || 'All Technologies' }}</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <div class="dropdown-content border-bottom rounded" [class.show]="isOpen">
+                            <a class="border-bottom rounded" (click)="selectTech('')">All Technologies</a>
+                            <a class="border-bottom rounded" *ngFor="let tech of technologies"
+                                (click)="selectTech(tech)">
+                                {{ tech }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="main_proj_2">
+    <div class="container project_section pro_2">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 project_data"
+                *ngFor="let project of filteredProjects">
+                <div class="card project-card shadow-lg  d-flex h-100">
+
+                    <!--  Image Slider -->
+                    <div id="carousel{{ project.id }}" class="carousel slide project-carousel" data-bs-ride="carousel">
+
+                        <!-- FULLSCREEN BUTTON -->
+                        <button class="fullscreen-btn" (click)="openFullscreen(project)">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item" *ngFor="let img of project.images; let i = index"
+                                [class.active]="i === 0">
+
+                                <img [src]="img" class="d-block w-100 project-img" alt="{{ project.name }}" />
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button"
+                            [attr.data-bs-target]="'#carousel' + project.id" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button"
+                            [attr.data-bs-target]="'#carousel' + project.id" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+
+
+                    <!--  Card Content -->
+                    <div class="card-body">
+                        <h5 class="fw-bold text-orange">{{ project.name }}</h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fa-solid fa-user-tie fs-7 text-orange me-2 role_fa"></i>
+                            <span class="fw-semibold small mx-3 role">{{ project.role }}</span>
+                        </div>
+
+                        <h6 class="fw-bold mt-3 description">DESCRIPTION</h6>
+                        <p class="small description_1">
+                            {{
+                            expandedDescription[project.id]
+                            ? project.description
+                            : (project.description | slice:0:120) + '...'
+                            }}
+                        </p>
+
+                        <span class="text-orange fw-bold small pointer" style="cursor: pointer;"
+                            (click)="toggleDescription(project.id)">
+                            {{
+                            expandedDescription[project.id]
+                            ? 'Show Less'
+                            : 'Show More'
+                            }}
+                        </span>
+
+
+                        <h6 class="fw-bold mt-3 tech">TECH STACK</h6>
+                        <div class="d-flex flex-wrap gap-2 mt-2 tech-stack">
+                            <span *ngFor="let tech of project.techStack" class="badge  text-orange border">
+                                {{ tech }}
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <button class="btn btn-dark w-100 m-1 btn-shine code_git">
+                                <i class="fa-brands fa-github me-2"></i> Code
+                            </button>
+                            <a [href]="project.liveDemo" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-orange w-100 m-1 btn-shine text-center">
+                                <i class="fa-solid fa-up-right-from-square me-2"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="filteredProjects.length === 0" class="text-center text-muted my-5">
+                <i class="fa-solid fa-folder-open fa-2x mb-3"></i>
+                <p>No projects found for your search/filter.</p>
+            </div>
+        </div>
+
+        <!-- Fullscreen Modal -->
+        <div class="modal fade" id="fullscreenModal" tabindex="-1">
+            <div class="modal-dialog  modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-black">
+                    <button class="position-absolute top-0 end-0 m-3 text-white border-0 bg-transparent fs-3"
+                        (click)="closeFullscreen()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="modal-body p-0">
+
+                        <div id="fullscreenCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item" *ngFor="let img of fullscreenImages; let i = index"
+                                    [class.active]="i === 0">
+
+                                    <img [src]="img" class="d-block w-100" />
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#fullscreenCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#fullscreenCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <img src="../../../../../assets/images/peacocke/01.png" alt="">
+<img src="../../../../../assets/images/peacocke/02.png" alt="">
+<img src="../../../../../assets/images/peacocke/cart.png" alt="">
+<img src="../../../../../assets/images/peacocke/login.png" alt=""> -->

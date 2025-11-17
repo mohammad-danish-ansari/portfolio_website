@@ -1,0 +1,83 @@
+<section class="py-5 text-white detail_section_1 mt-5" style="background-color: #e5e7eb; font-family: 'Alevia', serif;">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- 🧑‍💻 Left Column -->
+            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+                <h3 class="fw-normal mb-2 text-dark im">Hello, I'm</h3>
+                <h1 class="fw-bold mb-3" style="font-size: 3rem; color: red;">Mohammad Danish</h1>
+                <h4 class="text-warning mb-3 text-dark">Full-Stack Developer</h4>
+                <p class="text-secondary mb-4" style="max-width: 600px;">
+                    Specializing in scalable web applications and modern technologies.
+                    Passionate about creating innovative solutions that make a difference.
+                </p>
+
+                <div class="d-flex flex-wrap gap-4 mb-4">
+                    <!-- 🌍 Location Card -->
+                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 location" style="width: 180px;">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <!-- Location SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#ffc107"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <h6 class="text-uppercase text-secondary mb-0">Location</h6>
+                                <p class="mb-0 fw-semibold text-dark">India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Status Card -->
+                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 status" style="width: 180px;">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <!-- Status SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#00ff88"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4.5 8-10V5l-8-3-8 3v7c0 5.5 8 10 8 10Z"></path>
+                            </svg>
+                            <div>
+                                <h6 class="text-uppercase text-secondary mb-0">Status</h6>
+                                <p class="mb-0 fw-semibold text-success">Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-wrap gap-4 mb-4">
+                    <!-- 🌍 Location Card -->
+                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 view_my">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            
+                            <div>
+                                <h6 class="text-uppercase text-white mb-0" (click)="navigateTo('/project')">View My Work </h6>
+                            </div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Status Card -->
+                    <div class="card bg-light text-white  shadow-sm rounded-4 get_touch">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <div>
+                                <h6 class="text-uppercase text-secondary mb-0 text-dark" (click)="navigateTo('/contact')">Get In Touch</h6>
+                            </div>
+                            <i class="fa-solid fa-message text-dark touch_message" ></i>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- 🖼️ Right Column -->
+            <div class="col-lg-4 col-md-12 text-center">
+                <div class="position-relative d-inline-block profile-photo">
+                    <img src="assets/profile.jpg" alt="Profile Photo" class="rounded-circle img-fluid"
+                        style="width: 280px; height: 280px; object-fit: cover;">
+                    <div class="glow-circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

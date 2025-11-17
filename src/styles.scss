@@ -1,0 +1,367 @@
+/* You can add global styles to this file, and also import other style files */
+/* Light Mode (default) */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+// regular style toastr
+@import 'ngx-toastr/toastr';
+
+
+
+
+// =====================start   header section =================================
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark-theme .nav-link {
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .hover-underline:hover {
+  //   text-decoration: underline;
+  transition: all 0.5s ease;
+  color: rgb(233, 18, 18) !important;
+}
+body.dark-theme .custom-toggler .toggle {
+ color: white !important;
+}
+
+body.dark-theme .modal-header{
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+body.dark-theme .modal-body{
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+body.dark-theme .fa-solid{
+  color: white !important;
+  opacity: 0.8;
+}
+body.dark-theme  .modal-header .btn-close {
+    filter: invert(1); /* makes the X white */
+    opacity: 1; /* ensure it's fully visible */
+    border: none;
+}
+
+// =====================end   header section =================================
+
+// =====================start  image section =================================
+/* Dark Theme */
+body.dark-theme .detail_section_1 {
+  background-color: #1e1e1e !important; /* deep dark gray */
+  color: #f8f9fa; /* light text */
+}
+
+/* Optional: make cards adjust too */
+body.dark-theme .detail_section_1 .location {
+  background-color: rgb(31 41 55) !important;
+  border-color: #333 !important;
+  color: white;
+}
+body.dark-theme .detail_section_1 .status {
+  background-color: #14532d33 !important;
+  border: 1px solid rgb(233, 18, 18) !important;
+  color: white;
+}
+body.dark-theme .detail_section_1 .get_touch {
+  background-color: rgb(31 41 55) !important;
+  color: white;
+}
+body.dark-theme .touch_message {
+  color: #ffffff !important;
+}
+body.dark-theme .im,
+body.dark-theme h4,
+body.dark-theme .detail_section_1 h6,
+body.dark-theme .detail_section_1 p {
+  color: #f1f1f1 !important;
+}
+
+// =====================end  image section =================================
+
+//  =====================start Story  =====================================
+/* 🌙 Dark mode */
+body.dark-theme .my-story-section {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+body.dark-theme .my-story-section .my{
+  color: white !important;
+}
+body.dark-theme .story-card {
+  // background-color: #1f1f1f;
+  color: #f1f1f1;
+  // box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+body.dark-theme p {
+  color: #f1f1f1;
+}
+
+body.dark-theme .p_1 {
+  color: #f1f1f1;
+}
+body.dark-theme .featured{
+   background-color: #1e1e1e;
+}
+//  =====================end Story  ====================================
+
+// =====================start  achievements =================================
+
+body.dark-theme .achievements .card {
+  background-color: #121212;
+  border: 1px solid white;
+}
+
+body.dark-theme .achievements .text_achiev {
+ color: rgb(220, 219, 219) !important;
+}
+// =====================end  achievements =================================
+
+
+// =====================start  Project =================================
+body.dark-theme .pro_1 {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-theme .pro_1 .my {
+  color: white !important;
+}
+body.dark-theme .pro_1 .btn_tech {
+  color: white;
+}
+ body.dark-theme .pro_1 .text_pro{
+  color: rgb(220, 219, 219) !important;
+ }
+body.dark-theme .pro_1 input,
+body.dark-theme .pro_1 .input-group-text {
+  background-color: #1e1e1e !important;
+  color: white;
+}
+body.dark-theme .pro_1 .input-group input::placeholder,
+body.dark-theme .pro_1 .input-group .fa-magnifying-glass {
+  color: #fff !important;
+  opacity: 0.8 !important;
+}
+body.dark-theme .pro_1 .input-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #fff !important;
+}
+
+body.dark-theme .pro_1 .btn_sort_1 {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+body.dark-theme .pro_1 .dropdown-content {
+  background-color: #1e1e1e !important;
+}
+body.dark-theme .pro_1 .dropdown-content a {
+  color: white !important;
+}
+body.dark-theme .pro_1 .dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* For dark theme input and icon */
+
+body.dark-theme .project_section .card {
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+}
+body.dark-theme .project_section .code_git {
+  background-color: #4e4646;
+}
+body.dark-theme .pro_2 .description,
+body.dark-theme .pro_2 p,
+body.dark-theme .pro_2 .tech {
+  color: #f1f1f1;
+}
+body.dark-theme .pro_2 {
+  border-color: 1px solid white !important;
+}
+body.dark-theme .project_section .role{
+  background-color: #2f211a !important;
+  color: white;
+}
+body.dark-theme .main_proj_2 {
+  background-color: #121212 !important;
+}
+// =====================end  Project =================================
+// =====================start  experience ================================
+body.dark-theme .experience_section {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-theme .experience_section .my {
+  color: white !important;
+}
+
+body.dark-theme .experience_section .my {
+  color: white !important;
+}
+body.dark-theme .experience_section .exp_text {
+  color: white !important;
+}
+body.dark-theme .experience_section_2 .exp-card {
+  background-color: #1e1e1e !important;
+  border: 1px solid white;
+}
+body.dark-theme .experience_section_2 .exp_role {
+  color: #f3f6f8 !important;
+}
+
+
+body.dark-theme .experience_section_2 h4 {
+  color: #ff7a00 !important;
+}
+
+body.dark-theme .Core_main {
+  background-color: #1e1e1e !important;
+}
+body.dark-theme .Core_main .card {
+  background-color: #1e1e1e !important;
+  border: 1px solid white;
+  color: white;
+}
+
+body.dark-theme .Core_main .text_core {
+ color: rgb(220, 219, 219) !important;
+}
+
+// =====================end  experience ================================
+// =====================start  skills ================================
+body.dark-theme .skill_section{
+   background-color: #1e1e1e !important;
+}
+body.dark-theme .skill_section .my,
+body.dark-theme .skill_section .p_skill {
+  color: white !important;
+}
+body.dark-theme .skills-root .category-chip-wrapper .category-chip.active {
+  background-color: #c5762d !important;
+}
+body.dark-theme .skills-root .skill_level .sort-btn.active{
+  background-color: #2b1e17 !important;
+}
+body.dark-theme .skills-root .category-chip-wrapper .category-chip {
+  background-color: #323131 !important;
+  color: rgb(220, 219, 219);
+}
+
+body.dark-theme .skills-root .sort {
+  color: rgb(220, 219, 219);
+}
+body.dark-theme .skills-root .skill_level .btn-group button {
+  color: rgb(220, 219, 219);
+  background-color: #323131 !important;
+  border: none;
+  
+}
+body.dark-theme .skills-root .skill_in,
+body.dark-theme .skills-root .skill_in strong{
+  color: rgb(220, 219, 219) !important;
+}
+body.dark-theme .skills-root .skill-card{
+  background-color: #1e1e1e !important;
+}
+body.dark-theme .skills-root .level-pill{
+  color: rgb(220, 219, 219) !important;
+  background-color: rgb(121, 15, 15) !important;
+}
+body.dark-theme .skills-root .skill-title{
+  color: white !important;
+}
+body.dark-theme .skills-root .pro_yer
+{
+   color: rgb(220, 219, 219) !important; 
+}
+body.dark-theme .percentage {
+  fill: rgb(220, 219, 219) !important; 
+}
+
+// skill table===============
+body.dark-theme .table_main
+{
+background-color: #1e1e1e !important;
+}
+body.dark-theme .table_main .text_table{
+  color: rgb(220, 219, 219) !important;
+}
+body.dark-theme .table_main .card{
+  background-color: #1e1e1e !important;
+  border: 1px solid white;
+}
+// end skill table==============
+
+// start learning==============
+ body.dark-theme .learning .text_learning{
+   color: rgb(220, 219, 219) !important;
+ }
+body.dark-theme .learning .card{
+  background-color: #1e1e1e !important; 
+   border: 1px solid white;
+}
+// end learning==============
+
+// =====================end  skills ================================
+// rgb(220, 219, 219)
+// =====================start  contact_section ================================
+body.dark-theme .contact_section
+{
+ background-color: #1e1e1e !important; 
+}
+body.dark-theme .contact_section .my{
+  color: white !important;
+}
+body.dark-theme .contact_section p{
+   color: white !important;
+}
+
+body.dark-theme .contact_main p,
+body.dark-theme .contact_main h6{
+color: rgb(220, 219, 219) !important;
+}
+
+body.dark-theme .contact_main .card{
+ background-color: #1e1e1e !important; 
+ border: 1px solid white;
+}
+body.dark-theme .contact_main h3,
+body.dark-theme .contact_main label{
+color: rgb(220, 219, 219) !important;
+}
+body.dark-theme .contact_main input{
+  color: rgb(220, 219, 219) !important;
+  background-color: #121212 !important;
+  border: none;
+  border-bottom: 1px solid white !important;
+}
+body.dark-theme .contact_main textarea{
+  color: rgb(220, 219, 219) !important;
+  background-color: #121212 !important;
+  border: none;
+  border-bottom: 1px solid white !important;
+}
+body.dark-theme .contact_main input::placeholder,
+body.dark-theme .contact_main textarea::placeholder{
+  color: rgba(230, 215, 215, 0.61) !important;
+  font-size: 0.8rem;
+}
+body.dark-theme .contact_main .fa-envelope,
+body.dark-theme .contact_main .fa-location-dot,
+body.dark-theme .contact_main .fa-phone{
+  color: red !important;
+}
+
+
+// =====================end  contact_section ================================

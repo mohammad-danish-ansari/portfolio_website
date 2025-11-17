@@ -1,0 +1,119 @@
+<div class="container-fluid contact_section" style="font-family: 'Alevia', serif;">
+    <div class="row justify-content-center text-center row_1">
+        <div class="col-12">
+            <h1 class="fw-bold mb-3 display-5 text_contact" style="color: red;"><span class="my text-dark">Get</span>
+                In Touch</h1>
+            <div class="col-8 text-center m-auto">
+                <p class="text-secondary text-center fs-5 fw-semibold p_contact">
+                    Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something
+                    amazing together!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact_main">
+<div class="container contact-section" style="font-family: 'Alevia', serif;">
+    <div class="row">
+
+        <!-- LEFT SIDE (Contact Info) -->
+        <div class="col-md-6 mb-4">
+
+            <h2 class="fw-bold mb-3">Let's Start a Conversation</h2>
+            <p class="text-muted">
+                I'm always interested in new opportunities, interesting projects,
+                and meeting new people. Whether you have a question or just want
+                to say hi, I'll try my best to get back to you!
+            </p>
+
+            <div class="contact-info mt-4">
+                <!-- EMAIL -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-uppercase text-secondary mb-0">Email</h6>
+                        <p class="mb-0 fw-semibold text-dark">mdanishansari0074@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- PHONE -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-uppercase text-secondary mb-0">Phone</h6>
+                        <p class="mb-0 fw-semibold text-dark">+91 87888 23859</p>
+                    </div>
+                </div>
+
+                <!-- LOCATION -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-uppercase text-secondary mb-0">Location</h6>
+                        <p class="mb-0 fw-semibold text-dark">India</p>
+                    </div>
+                </div>
+
+
+                <!-- Social Links -->
+                <div class="social-icons mt-3 d-flex gap-3">
+                    <a href="https://www.linkedin.com/in/mohammad-danish-458135306/" target="_blank" class="icon-social linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/mohammad-danish-ansari" target="_blank" class="icon-social github" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/918788823859" target="_blank" class="icon-social whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (Contact Form) -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="fw-bold mb-3">Send me a message</h3>
+
+                    <form [formGroup]="form">
+                        <div class="mb-3">
+                            <label class="form-label">Name *</label>
+                            <input type="text" class="form-control" placeholder="Your full name"  formControlName="name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone *</label>
+                            <input type="text" class="form-control" placeholder="Your phone no"  formControlName="phone">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-control" placeholder="your.email@example.com"  formControlName="email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Subject *</label>
+                            <input type="text" class="form-control" placeholder="What's this about?"  formControlName="subject">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message *</label>
+                            <textarea class="form-control" rows="4"
+                                placeholder="Tell me about your project or just say hello..."  formControlName="message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-red w-100 mt-3" (click)="submit()">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
