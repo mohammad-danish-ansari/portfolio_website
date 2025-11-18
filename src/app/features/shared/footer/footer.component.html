@@ -1,8 +1,47 @@
 <footer class="text-white pt-5 pb-3" style="background-color: #000000; font-family: 'Alevia', serif;">
   <div class="container">
     <div class="row gy-4">
-      <!-- 🌐 Column 1 -->
-      <div class="col-lg-4 col-md-6">
+      <!--  Column 1 -->
+      <div class="col-lg-4 col-md-6 pt-0">
+        <div class="logo-spin">
+          <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Base leaf (we will rotate this) -->
+            <defs>
+              <path id="leaf" d="
+      M100 100
+      Q100 20 150 60
+      Q100 100 100 100
+      Z" />
+            </defs>
+
+            <!-- 0° Top (dark blue) -->
+            <use href="#leaf" fill="#0d2644" transform="rotate(0 100 100)" />
+
+            <!-- 45° -->
+            <use href="#leaf" fill="#fbb03b" transform="rotate(45 100 100)" />
+
+            <!-- 90° -->
+            <use href="#leaf" fill="#0d2644" transform="rotate(90 100 100)" />
+
+            <!-- 135° -->
+            <use href="#leaf" fill="#fbb03b" transform="rotate(135 100 100)" />
+
+            <!-- 180° -->
+            <use href="#leaf" fill="#0d2644" transform="rotate(180 100 100)" />
+
+            <!-- 225° -->
+            <use href="#leaf" fill="#fbb03b" transform="rotate(225 100 100)" />
+
+            <!-- 270° -->
+            <use href="#leaf" fill="#0d2644" transform="rotate(270 100 100)" />
+
+            <!-- 315° -->
+            <use href="#leaf" fill="#fbb03b" transform="rotate(315 100 100)" />
+
+          </svg>
+
+        </div>
         <h4 class="fw-bold mb-3">Full-Stack Developer</h4>
         <p>
           Passionate about creating innovative solutions and building amazing user experiences
@@ -10,11 +49,15 @@
         </p>
         <h5 class="mt-4 fw-bold">Get In Touch</h5>
         <p>Ready to start your project?</p>
-        <a (click)="navigateAndScroll('/contact', 'home')"
-          class="btn btn-outline-light btn-sm rounded-2 fw-bold px-4 Contact_me">Contact Me</a>
+        <!-- <a 
+          class="btn btn-outline-light btn-sm rounded-2 fw-bold px-4 Contact_me">Contact Me</a> -->
+        <button (click)="navigateAndScroll('/contact', 'home')" class="btn build-btn work_footer_btn"
+          (click)="navigateAndScroll('/contact', 'home')">
+          <i class="fa-solid fa-envelope me-1"></i> Contact Me
+        </button>
       </div>
 
-      <!-- ⚡ Column 2 -->
+      <!--  Column 2 -->
       <div class="col-lg-4 col-md-6">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled quick-links">
@@ -28,7 +71,7 @@
         </ul>
       </div>
 
-      <!-- 🛠 Column 3 -->
+      <!--  Column 3 -->
       <div class="col-lg-4 col-md-6">
         <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled Services">
@@ -38,7 +81,7 @@
           <li><i class="fas fa-plug me-2"></i>API Development</li>
         </ul>
 
-        <!-- 🌍 Social Icons -->
+        <!--  Social Icons -->
         <div class="mt-4 d-flex gap-3 social-icons">
 
           <!-- WhatsApp -->
@@ -52,9 +95,9 @@
           </a>
 
           <!-- GitHub -->
-          <a href="https://github.com/mohammad-danish-ansari" target="_blank" rel="noopener">
+          <!-- <a href="https://github.com/mohammad-danish-ansari" target="_blank" rel="noopener">
             <i class="fab fa-github"></i>
-          </a>
+          </a> -->
 
           <a href="mailto:mdanishansari0074@gmail.com" target="_blank" rel="noopener">
             <i class="fas fa-envelope"></i>
@@ -64,10 +107,10 @@
       </div>
     </div>
 
-    <!-- 🔻 Bottom Line -->
+    <!--  Bottom Line -->
     <hr class="border-secondary mt-5 mb-3">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center footer_privacy">
         <p class="mb-1">© 2025 Mohammad Danish. All rights reserved.</p>
         <a class="text-white text-decoration-none me-3">Privacy Policy</a>
         <a class="text-white text-decoration-none">Terms of Service</a>

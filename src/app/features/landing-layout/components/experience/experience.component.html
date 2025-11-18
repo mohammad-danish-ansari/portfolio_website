@@ -1,6 +1,6 @@
 <div class="container-fluid exp_1 experience_section" style="font-family: 'Alevia', serif;">
     <div class="row justify-content-center text-center mb-2 my_experience">
-        <div class="col-12 text-center mb-4">
+        <div class="col-12 text-center mb-4" data-aos="fade-up" data-aos-duration="2000">
             <h1 class="fw-bold mb-3 display-5 text_experience" style="color: red;"><span class="my text-dark">My</span>
                 Experience</h1>
             <div class="col-6 text-center m-auto">
@@ -31,22 +31,22 @@
 
     <div class="row mb-5 align-items-center position-relative" *ngFor="let exp of experiences; let i = index">
         <!-- LEFT SIDE -->
-        <div class="col-sm-8 col-md-5 col-lg-5" *ngIf="exp.position === 'left'">
+        <div class="col-sm-8 col-md-5 col-lg-5" *ngIf="exp.position === 'left'" data-aos="fade-up" data-aos-duration="2000">
             <div class="exp-card p-4 shadow-lg">
-                <h4 class="text-orange mb-1">{{ exp.company }}</h4>
-                <h6 class="text-muted mb-2 exp_role">{{ exp.role }}</h6>
-                <p class="m-0 small">
+                <h4 class="text-orange mb-1" data-aos="fade-right" data-aos-duration="2000">{{ exp.company }}</h4>
+                <h6 class="text-muted mb-2 exp_role" data-aos="fade-right" data-aos-duration="2000">{{ exp.role }}</h6>
+                <p class="m-0 small" data-aos="fade-up" data-aos-duration="2000">
                     <i class="fa-solid fa-calendar-days text-orange me-2"></i>
                     {{ exp.period }}
                 </p>
-                <p class="mb-2 small">
+                <p class="mb-2 small" data-aos="fade-up" data-aos-duration="2000">
                     <i class="fa-solid fa-location-dot text-orange me-2"></i>
                     {{ exp.location }}
                 </p>
-                <p style="font-size: 0.9rem;">{{ exp.description }}</p>
+                <p style="font-size: 0.9rem;" data-aos="fade-right" data-aos-duration="2000">{{ exp.description }}</p>
                 <div class="tech-stack">
                     <p class="m-0 fw-bold" style="font-size: 1.2rem;">{{exp.techUsed}}</p>
-                    <span class="badge"
+                    <span class="badge" data-aos="fade-up" data-aos-duration="2000"
                         *ngFor="let tech of (exp.showAllTech ? exp.techStack : exp.techStack.slice(0, 6))" [@bubbleAnimation]>{{ tech
                         }}</span>
                     <span class="badge poinetr text-dark bg-gray"
@@ -60,22 +60,22 @@
 
         <!-- RIGHT SIDE -->
         <div class="col-sm-4 col-md-7 col-lg-7" *ngIf="exp.position === 'right'"></div>
-        <div class="col-sm-8 col-md-5 col-lg-5" *ngIf="exp.position === 'right'">
+        <div class="col-sm-8 col-md-5 col-lg-5" *ngIf="exp.position === 'right'" >
             <div class="exp-card p-4 shadow-lg" >
-                <h4 class="text-orange mb-1 ">{{ exp.company }}</h4>
-                <h6 class="text-muted mb-2 exp_role">{{ exp.role }}</h6>
-                <p class="m-0 small">
+                <h4 class="text-orange mb-1" data-aos="fade-right" data-aos-duration="2000">{{ exp.company }}</h4>
+                <h6 class="text-muted mb-2 exp_role" data-aos="fade-right" data-aos-duration="2000">{{ exp.role }}</h6>
+                <p class="m-0 small" data-aos="fade-up" data-aos-duration="2000">
                     <i class="fa-solid fa-calendar-days text-orange me-2"></i>
                     {{ exp.period }}
                 </p>
-                <p class="mb-2 small">
+                <p class="mb-2 small" data-aos="fade-up" data-aos-duration="2000">
                     <i class="fa-solid fa-location-dot text-orange me-2"></i>
                     {{ exp.location }}
                 </p>
-                <p style="font-size: 0.9rem;">{{ exp.description }}</p>
+                <p style="font-size: 0.9rem;" data-aos="fade-up" data-aos-duration="2000">{{ exp.description }}</p>
                 <div class="tech-stack">
                     <p class="m-0 fw-bold"  style="font-size: 1.2rem;">{{exp.techUsed}}</p>
-                    <span class="badge exp_badge" 
+                    <span class="badge exp_badge" data-aos="fade-up" data-aos-duration="2000" 
                         *ngFor="let tech of (exp.showAllTech ? exp.techStack : exp.techStack.slice(0, 6))" [@bubbleAnimation]>{{ tech
                         }}</span>
                     <span class="badge poinetr text-dark bg-gray"
@@ -93,7 +93,7 @@
 <div class="Core_main" style="font-family: 'Alevia', serif;">
 <div class="container">
     <div class="row justify-content-center text-center mb-3">
-        <div class="col-12">
+        <div class="col-12" data-aos="fade-down" data-aos-duration="2000">
             <h1 class="fw-bold mb-3 core_1">Core Competencies</h1>
             <p class="text-secondary fs-5 text_core">
                 Skills and expertise developed through professional experience
@@ -103,7 +103,7 @@
      <div class="row">
             <div class="col-12 col-sm-12 col-md-4 mb-4" *ngFor="let skill of skills">
                 <div class="card p-3 skill-card d-flex justify-content-center h-100 shadow-lg">
-                    <div class="body">
+                    <div class="body" data-aos="fade-up" data-aos-duration="2000">
                         <div class="text-center fa_right mb-2 fs-2">
                            {{skill.icon}}
                         </div>

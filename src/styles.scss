@@ -99,12 +99,15 @@ body.dark-theme .my-story-section {
 body.dark-theme .my-story-section .my{
   color: white !important;
 }
+body.dark-theme .my-story-section p{
+  color: rgb(220, 219, 219) !important;
+}
 body.dark-theme .story-card {
   // background-color: #1f1f1f;
   color: #f1f1f1;
   // box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
-body.dark-theme p {
+body.dark-theme  p {
   color: #f1f1f1;
 }
 
@@ -125,6 +128,9 @@ body.dark-theme .achievements .card {
 
 body.dark-theme .achievements .text_achiev {
  color: rgb(220, 219, 219) !important;
+}
+body.dark-theme .achievements .card .body .fa-arrow-right {
+ color: black !important;
 }
 // =====================end  achievements =================================
 
@@ -190,11 +196,27 @@ body.dark-theme .pro_2 {
   border-color: 1px solid white !important;
 }
 body.dark-theme .project_section .role{
-  background-color: #2f211a !important;
+  // background-color: #2f211a !important;
+   background-color: #fdeacf2e;
   color: white;
 }
 body.dark-theme .main_proj_2 {
   background-color: #121212 !important;
+}
+body.dark-theme .main_proj_2  .role_fa{
+ background-color: #dfd1bd78;
+}
+body.dark-theme .main_proj_2  .modal-content .fa-xmark{
+   color: black !important;
+}
+
+body.dark-theme .modelPage{
+  background-color: #000000 !important;
+  border: 1px solid white;
+}
+body.dark-theme .modelPage .fa-lock{
+color: #ffb84d !important;
+ background-color: #dfd1bd78;
 }
 // =====================end  Project =================================
 // =====================start  experience ================================
@@ -312,7 +334,15 @@ body.dark-theme .learning .card{
    border: 1px solid white;
 }
 // end learning==============
-
+body.dark-theme .build .start-btn .fa-rocket{
+color: red !important;
+}
+body.dark-theme .build .start-btn:hover i{
+color: white !important;
+}
+body.dark-theme .build .work-btn:hover i {
+color: red !important;
+}
 // =====================end  skills ================================
 // rgb(220, 219, 219)
 // =====================start  contact_section ================================
@@ -365,3 +395,9 @@ body.dark-theme .contact_main .fa-phone{
 
 
 // =====================end  contact_section ================================
+// =====================end  footer section ================================
+body.dark-theme  .work_footer_btn:hover i{
+  color: #ff4500 !important;
+
+  // =====================end  footer section ================================
+}

@@ -1,13 +1,13 @@
 <div class="container-fluid pro_1 project_section" style="font-family: 'Alevia', serif;">
     <div class="row justify-content-center text-center mb-2 my_project">
-        <div class="col-12 text-center mb-4">
+        <div class="col-12 text-center mb-4" data-aos="fade-up" data-aos-duration="2000">
             <h1 class="fw-bold mb-3 display-5 text_project" style="color: red;"><span class="my text-dark">My</span>
                 Projects</h1>
             <p class="text-secondary fs-5 text_pro">
                 A showcase of my work in web development, featuring modern technologies and innovative solutions
             </p>
 
-            <!-- 🔍 Search and Filter -->
+            <!--  Search and Filter -->
             <div class="d-flex justify-content-center align-items-center gap-3 mt-4 flex-wrap search_sort ">
                 <!-- Search Box -->
                 <div class="input-group shadow-sm main_grop" style="width: 20rem; height: 3rem;">
@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 project_data"
                 *ngFor="let project of filteredProjects">
-                <div class="card project-card shadow-lg  d-flex h-100">
+                <div class="card project-card shadow-lg  d-flex h-100 flex-column">
 
                     <!--  Image Slider -->
                     <div id="carousel{{ project.id }}" class="carousel slide project-carousel" data-bs-ride="carousel">
@@ -84,7 +84,7 @@
 
 
                     <!--  Card Content -->
-                    <div class="card-body">
+                    <div class="card-body flex-column d-flex flex-1">
                         <h5 class="fw-bold text-orange">{{ project.name }}</h5>
                         <div class="d-flex align-items-center mb-2">
                             <i class="fa-solid fa-user-tie fs-7 text-orange me-2 role_fa"></i>
@@ -111,20 +111,20 @@
 
 
                         <h6 class="fw-bold mt-3 tech">TECH STACK</h6>
-                        <div class="d-flex flex-wrap gap-2 mt-2 tech-stack">
+                        <div class="d-flex flex-wrap gap-2 mt-2 tech-stack mb-2">
                             <span *ngFor="let tech of project.techStack" class="badge  text-orange border">
                                 {{ tech }}
                             </span>
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center mt-4">
-                            <button class="btn btn-dark w-100 m-1 btn-shine code_git">
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <button class="btn btn-dark w-100 m-1 btn-shine code_git" (click)="openConfirmModal()">
                                 <i class="fa-brands fa-github me-2"></i> Code
                             </button>
-                            <a [href]="project.liveDemo" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-orange w-100 m-1 btn-shine text-center">
+                            <button class="btn btn-orange w-100 m-1 btn-shine text-center"
+                                (click)="handleLiveDemo(project)">
                                 <i class="fa-solid fa-up-right-from-square me-2"></i> Live Demo
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -140,9 +140,10 @@
         <div class="modal fade" id="fullscreenModal" tabindex="-1">
             <div class="modal-dialog  modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content bg-black">
-                    <button class="position-absolute top-0 end-0 m-3 text-white border-0 bg-transparent fs-3"
-                        (click)="closeFullscreen()">
-                        <i class="fa-solid fa-xmark"></i>
+                    <button type="button"
+                        class="position-absolute top-0 end-0 m-3 text-white border-0 bg-transparent fs-3"
+                        data-bs-dismiss="modal" style="z-index: 1051;">
+                        <i class="fa-solid fa-xmark text-dark"></i>
                     </button>
                     <div class="modal-body p-0">
 
@@ -174,8 +175,3 @@
 
     </div>
 </div>
-
-<!-- <img src="../../../../../assets/images/peacocke/01.png" alt="">
-<img src="../../../../../assets/images/peacocke/02.png" alt="">
-<img src="../../../../../assets/images/peacocke/cart.png" alt="">
-<img src="../../../../../assets/images/peacocke/login.png" alt=""> -->

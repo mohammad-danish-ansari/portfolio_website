@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './features/shared/header/header.component';
 import { FooterComponent } from './features/shared/footer/footer.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmDeleteComponent } from './features/confirm-delete/confirm-delete.component';
+
 @NgModule({
-  declarations: [AppComponent,HeaderComponent,FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ConfirmDeleteComponent,
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -32,6 +39,6 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

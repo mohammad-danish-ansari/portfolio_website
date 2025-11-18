@@ -21,9 +21,7 @@ const routes: Routes = [
         (m) => m.AuthLayoutModule
       ),
   },
-  // {
-  //   path:"", loadChildren:()=> import("./features/landing-layout/landing-layout.module").then((m)=>m.LandingLayoutModule)
-  // }
+
 ];
 
 @NgModule({

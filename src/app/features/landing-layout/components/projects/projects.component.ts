@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmDeleteComponent } from 'src/app/features/confirm-delete/confirm-delete.component';
 
 @Component({
   selector: 'app-projects',
@@ -10,6 +12,8 @@ export class ProjectsComponent {
   selectedTech: string = '';
 
   isOpen = false;
+
+  constructor(private modalService: NgbModal) {}
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
@@ -25,11 +29,12 @@ export class ProjectsComponent {
   openFullscreen(project: any) {
     this.fullscreenImages = project.images;
 
-    const modal = new (window as any).bootstrap.Modal(
+    this.fullscreenModal = new (window as any).bootstrap.Modal(
       document.getElementById('fullscreenModal')
     );
-    modal.show();
+    this.fullscreenModal.show();
   }
+
   closeFullscreen() {
     if (this.fullscreenModal) {
       this.fullscreenModal.hide();
@@ -180,6 +185,34 @@ export class ProjectsComponent {
       codeLink: 'https://github.com/yourusername/portfolio',
       liveDemo: 'https://peacockcollective.in/home',
     },
+    {
+      id: 6,
+      name: 'Purchase  E-commers',
+      role: 'Full Stack Developer',
+      description:
+        'A scalable e-commerce platform built using React and modular component architecture. Implements Razorpay payment gateway, optimized product filtering, responsive UI, and real-time inventory management. Backend developed with Node.js/Express and MongoDB, featuring JWT authentication and end-to-end REST APIs.',
+      techStack: [
+        'React',
+        'Bootstrap',
+        'SCSS',
+        'SASS',
+        'CSS',
+        'HTML',
+        'Node.js',
+        'Express.js',
+        'MongoDb',
+      ],
+      images: [
+        '../../../../../assets/images/purches/01.png',
+        '../../../../../assets/images/purches/02.png',
+        '../../../../../assets/images/purches/03.png',
+        '../../../../../assets/images/purches/04.png',
+        '../../../../../assets/images/purches/05.png',
+        '../../../../../assets/images/purches/06.png',
+      ],
+      codeLink: 'https://github.com/yourusername/portfolio',
+      liveDemo: '',
+    },
   ];
 
   get filteredProjects() {
@@ -203,5 +236,46 @@ export class ProjectsComponent {
 
       return matchesSearch && matchesTech;
     });
+  }
+
+  openConfirmModal() {
+    const modalRef = this.modalService.open(ConfirmDeleteComponent, {
+      centered: true,
+      size: 'md',
+      backdrop: 'static',
+      keyboard: false,
+    });
+
+    modalRef.componentInstance.heading = 'Source Code Unavailable';
+    modalRef.componentInstance.confirmText = `Source code unavailable due to company confidentiality policies and proprietary restrictions ?`;
+    modalRef.result.then(
+      (success: any) => {
+        if (success.title == 'Yes') {
+        }
+      },
+      (reason: any) => {}
+    );
+  }
+
+  handleLiveDemo(project: any) {
+    if (!project.liveDemo) {
+      const modalRef = this.modalService.open(ConfirmDeleteComponent, {
+        centered: true,
+        size: 'md',
+        backdrop: 'static',
+        keyboard: false,
+      });
+
+      modalRef.componentInstance.heading = 'Live Demo Not Available';
+      modalRef.componentInstance.confirmText =
+        'This project is not deployed yet. It is currently under development.';
+
+      modalRef.result.then(
+        (success: any) => {},
+        (reason: any) => {}
+      );
+    } else {
+      window.open(project.liveDemo, '_blank');
+    }
   }
 }

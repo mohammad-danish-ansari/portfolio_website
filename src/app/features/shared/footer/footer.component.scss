@@ -1,12 +1,49 @@
+
+.logo-spin {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 800px;
+}
+
+.logo-spin svg {
+  width: 70px;
+  height: 70px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .Contact_me{
 padding: 0.5rem;
 }
-.Contact_me:hover{
-  transition: color 0.4s ease;   
-   background-color: #ea580c;
+.work_footer_btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+   transition: color 0.3s ease-in-out; 
 }
 
-/* 🌐 Quick Links Styling */
+.work_footer_btn:hover {
+  background: #fff;
+  color: #ff4500;
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+   transition: color 0.4s ease-in-out; 
+}
+
+
+
+/*  Quick Links Styling */
 .quick-links a {
   cursor: pointer;
   display: inline-block;
@@ -45,7 +82,7 @@ display: inline-block;
   line-height: 2; /* adds a bit more vertical spacing */
   transition: color 0.3s ease;
 }
-/* 💬 Social Icons */
+/*  Social Icons */
 .social-icons a {
   display: flex;
   justify-content: center;
@@ -63,4 +100,8 @@ display: inline-block;
   transform: scale(1.1);
   color: #ea580c !important;
    transition: all 0.3s ease;
+}
+
+.footer_privacy{
+  margin-bottom: 3rem;
 }

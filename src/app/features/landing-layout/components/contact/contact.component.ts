@@ -40,10 +40,7 @@ form = new FormGroup({
         message: "subject is Required",
         key: "subject"
     },
-    // {
-    //     message: "message is Required",
-    //     key: "message"
-    // },
+  
     
 ];
 

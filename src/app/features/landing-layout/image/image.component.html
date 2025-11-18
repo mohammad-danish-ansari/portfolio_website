@@ -2,19 +2,25 @@
     <div class="container">
         <div class="row align-items-center">
 
-            <!-- 🧑‍💻 Left Column -->
-            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
-                <h3 class="fw-normal mb-2 text-dark im">Hello, I'm</h3>
-                <h1 class="fw-bold mb-3" style="font-size: 3rem; color: red;">Mohammad Danish</h1>
-                <h4 class="text-warning mb-3 text-dark">Full-Stack Developer</h4>
-                <p class="text-secondary mb-4" style="max-width: 600px;">
+           
+            <!--  Left Column -->
+            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0 order-2 order-lg-1">
+                <h3 class="fw-normal mb-2 text-dark im" data-aos="fade-right" data-aos-duration="2000">Hello, I'm
+                </h3>
+                <h1 class="fw-bold mb-3 typewriter" data-aos="fade-right" data-aos-duration="2000"
+                    style="font-size: 3rem; color: red;">Mohammad Danish</h1>
+                <h4 class="text-warning mb-3 text-dark" data-aos="fade-right" data-aos-duration="2000">Full-Stack
+                    Developer</h4>
+                <p class="text-secondary mb-4" style="max-width: 600px;" data-aos="fade-up-right"
+                    data-aos-duration="2000">
                     Specializing in scalable web applications and modern technologies.
                     Passionate about creating innovative solutions that make a difference.
                 </p>
 
                 <div class="d-flex flex-wrap gap-4 mb-4">
-                    <!-- 🌍 Location Card -->
-                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 location" style="width: 180px;">
+                    <!--  Location Card -->
+                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 location" style="width: 180px;"
+                        data-aos="fade-right" data-aos-duration="2000">
                         <div class="card-body d-flex align-items-center gap-3">
                             <!-- Location SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#ffc107"
@@ -29,8 +35,9 @@
                         </div>
                     </div>
 
-                    <!-- ✅ Status Card -->
-                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 status" style="width: 180px;">
+                    <!--  Status Card -->
+                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 status" style="width: 180px;"
+                        data-aos="fade-right" data-aos-duration="2000">
                         <div class="card-body d-flex align-items-center gap-3">
                             <!-- Status SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#00ff88"
@@ -44,40 +51,45 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="d-flex flex-wrap gap-4 mb-4">
-                    <!-- 🌍 Location Card -->
-                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 view_my">
+                    <!--  Location Card -->
+                    <div class="card bg-light text-white border-0 shadow-sm rounded-4 view_my" data-aos="fade-right"
+                        data-aos-duration="2000">
                         <div class="card-body d-flex align-items-center gap-3">
-                            
+
                             <div>
-                                <h6 class="text-uppercase text-white mb-0" (click)="navigateTo('/project')">View My Work </h6>
+                                <h6 class="text-uppercase text-white mb-0" (click)="navigateTo('/project')">View My Work
+                                </h6>
                             </div>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
 
-                    <!-- ✅ Status Card -->
-                    <div class="card bg-light text-white  shadow-sm rounded-4 get_touch">
+                    <!--  Status Card -->
+                    <div class="card bg-light text-white  shadow-sm rounded-4 get_touch" data-aos="fade-right"
+                        data-aos-duration="2000">
                         <div class="card-body d-flex align-items-center gap-3">
                             <div>
-                                <h6 class="text-uppercase text-secondary mb-0 text-dark" (click)="navigateTo('/contact')">Get In Touch</h6>
+                                <h6 class="text-uppercase text-secondary mb-0 text-dark"
+                                    (click)="navigateTo('/contact')">Get In Touch</h6>
                             </div>
-                            <i class="fa-solid fa-message text-dark touch_message" ></i>
+                            <i class="fa-solid fa-message text-dark touch_message"></i>
                         </div>
                     </div>
                 </div>
-                
-            </div>
 
-            <!-- 🖼️ Right Column -->
-            <div class="col-lg-4 col-md-12 text-center">
-                <div class="position-relative d-inline-block profile-photo">
-                    <img src="assets/profile.jpg" alt="Profile Photo" class="rounded-circle img-fluid"
-                        style="width: 280px; height: 280px; object-fit: cover;">
-                    <div class="glow-circle"></div>
+            </div>
+ <!--  Right Column -->
+            <div class="col-lg-4 col-md-12 text-center order-1 order-lg-2 image_content">
+                <div class="profile-wrapper">
+                    <div class="profile-frame">
+                        <img src="../../../../assets/profile/circle_02.png" alt="Profile Photo"
+                            class="profile-img d-flex align-items-center text-center">
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

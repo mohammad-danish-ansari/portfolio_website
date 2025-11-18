@@ -1,6 +1,6 @@
 <div class="container-fluid skill_section" style="font-family: 'Alevia', serif;">
     <div class="row justify-content-center text-center row_1">
-        <div class="col-12">
+        <div class="col-12" data-aos="fade-up" data-aos-duration="2000">
             <h1 class="fw-bold mb-3 display-5 text_skill" style="color: red;"><span class="my text-dark">My</span>
                 Skills</h1>
             <div class="col-8 text-center m-auto">
@@ -100,7 +100,7 @@
 <div class="table_main" style="font-family: 'Alevia', serif;">
     <div class="container">
         <div class="row justify-content-center text-center mb-3 table_row">
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up" data-aos-duration="2000">
                 <h1 class="fw-bold mb-3 table_1">What I Bring to the Table</h1>
                 <p class="text-secondary fs-5 text_table">
                     My approach to development and the value I provide to projects
@@ -110,7 +110,8 @@
 
         <div class="row">
             <div class="col-12 col-sm-12 col-md-4 mb-4" *ngFor="let t of bring_table">
-                <div class="card p-3  table_card d-flex justify-content-center h-100 shadow-lg">
+                <div class="card p-3  table_card d-flex justify-content-center h-100 shadow-lg" data-aos="fade-up"
+                    data-aos-duration="2000">
                     <div class="body">
                         <div class="text-center fa_right mb-2 fs-2">
                             {{ t.icon }}
@@ -136,7 +137,7 @@
 <div class="learning" style="font-family: 'Alevia', serif;">
     <div class="container">
         <div class="row justify-content-center text-center mb-3 learning_row">
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up" data-aos-duration="2000">
                 <h1 class="fw-bold mb-3 learning_1">My Learning Journey</h1>
                 <p class="text-secondary fs-5 text_learning">
                     How I have developed my skills and continue to grow as a developer
@@ -147,8 +148,8 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-5 col-lg-5 mb-4 d-flex justify-content-center "
                 *ngFor="let t of learning_journey">
-                <div
-                    class="card p-4 learning_card d-flex flex-column justify-content-center h-100 shadow-lg text-center w-100">
+                <div class="card p-4 learning_card d-flex flex-column justify-content-center h-100 shadow-lg text-center w-100"
+                    data-aos="fade-up" data-aos-duration="2000">
                     <p class="title fw-bold learning_title">{{ t.title }}</p>
                     <p>{{ t.description }}</p>
 
@@ -168,31 +169,32 @@
 
 <!--  build start================================ -->
 <div class="build" style="font-family: 'Alevia', serif;">
-   <div class="container build-section">
-  <div class="row justify-content-center text-center mb-3 build_row">
-    <div class="col-12">
-      <h1 class="fw-bold mb-3 build_1 text-white">Let's Build Something Great</h1>
-      <div class="col-8 text-center m-auto">
-        <p class="text-white fs-5 text_build">
-          Ready to leverage my skills for your next project? I'm excited to bring my expertise to your
-          team and help create amazing solutions.
-        </p>
-      </div>
+    <div class="container build-section">
+        <div class="row justify-content-center text-center mb-3 build_row">
+            <div class="col-12">
+                <h1 class="fw-bold mb-3 build_1 text-white" data-aos="fade-up" data-aos-duration="2000">Let's Build
+                    Something Great</h1>
+                <div class="col-8 text-center m-auto">
+                    <p class="text-white fs-5 text_build">
+                        Ready to leverage my skills for your next project? I'm excited to bring my expertise to your
+                        team and help create amazing solutions.
+                    </p>
+                </div>
 
-      <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
-        <!-- Start a Project Button -->
-        <button class="btn build-btn start-btn">
-          <i class="fa-solid fa-rocket me-2"></i> Start a Project
-        </button>
+                <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
+                    <button data-aos="fade-up" data-aos-duration="2000" class="btn build-btn start-btn"
+                        (click)="navigateAndScroll('/contact', 'home')">
+                        <i class="fa-solid fa-rocket me-2"></i> Start a Project
+                    </button>
 
-        <!-- See My Work Button -->
-        <button class="btn build-btn work-btn">
-          <i class="fa-solid fa-folder-open me-2"></i> See My Work
-        </button>
-      </div>
+                    <button data-aos="fade-down" data-aos-duration="2000" class="btn build-btn work-btn"
+                        (click)="navigateAndScroll('/project', 'home')">
+                        <i class="fa-solid fa-folder-open me-2"></i> See My Work
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 </div>
 

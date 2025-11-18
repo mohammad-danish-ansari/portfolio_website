@@ -1,0 +1,37 @@
+<div class="modelPage" >
+
+    <!-- Lock Icon -->
+    <div class="icon-lock mb-1">
+        <i class="fa-solid fa-lock " style="color: #ffb84d; font-size: 3rem;"></i>
+    </div>
+
+    <!-- Heading -->
+    <div class="modal-header mb-2 text-center d-flex justify-content-center">
+        <div class="heading text-center" style="font-size: 1.8rem; font-weight: 700; color: #ff7a00;">
+            {{ heading }}
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h4 style="font-size: 1.2rem; color: #7a6060; font-weight: 500;">
+                        {{ confirmText }}
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row justify-content-center my-4">
+                <div class="col-6 text-center">
+                    <button type="button" class="btn btn-orange px-5 py-2"
+                        style="background-color: #ff7a00; color: #fff; font-weight: 600; font-size: 1rem; border-radius: 8px; transition: 0.3s;"
+                        (click)="dismissModal()">
+                        Understood
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
