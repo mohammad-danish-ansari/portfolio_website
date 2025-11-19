@@ -53,6 +53,10 @@
                     <div class="icon-wrap">
                         <div class="icon-bg">
                             <i [class]="s.icon" aria-hidden="true"></i>
+                            <!-- <img *ngIf="s.icon === 'ionic'" src="../../../../../assets/logo/reaction.png"
+                                width="20" height="20" alt="Ionic Logo" class="ionic" /> -->
+                                <ion-icon *ngIf="s.icon === 'ionic'" name="logo-ionic"></ion-icon>
+                                
                         </div>
                     </div>
                     <div class="level-pill text-muted">{{ s.level }}</div>

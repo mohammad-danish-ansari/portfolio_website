@@ -73,17 +73,17 @@ interface Skill {
 export class SkillsComponent {
   showAllSkills: boolean = false;
 
-  constructor(private router :Router){}
+  constructor(private router: Router) {}
 
-   navigateAndScroll(route: string, section: string) {
-  this.router.navigate([route]).then(() => {
-    setTimeout(() => {
-      this.scrollTo(section);
-    }, 300);
-  });
-}
+  navigateAndScroll(route: string, section: string) {
+    this.router.navigate([route]).then(() => {
+      setTimeout(() => {
+        this.scrollTo(section);
+      }, 300);
+    });
+  }
 
- scrollTo(section: any) {
+  scrollTo(section: any) {
     var element: any = document.getElementById(section);
     element.scrollIntoView({
       behavior: 'smooth',
@@ -121,7 +121,7 @@ export class SkillsComponent {
       level: 'Expert',
       proficiency: 95,
       years: 2.2,
-      icon: 'fa-brands fa-bootstrap',
+      icon: 'fa-solid fa-code',
       showAllSkills: false,
     },
     {
@@ -131,7 +131,7 @@ export class SkillsComponent {
       level: 'Advanced',
       proficiency: 80,
       years: 2.2,
-      icon: 'fa-brands fa-bootstrap',
+       icon: 'fa-brands fa-css3-alt',
       showAllSkills: false,
     },
     {
@@ -141,7 +141,7 @@ export class SkillsComponent {
       level: 'Advanced',
       proficiency: 80,
       years: 2.2,
-      icon: 'fa-brands fa-bootstrap',
+       icon: 'fa-brands fa-css3-alt',
       showAllSkills: false,
     },
     {
@@ -151,7 +151,7 @@ export class SkillsComponent {
       level: 'Advanced',
       proficiency: 80,
       years: 1,
-      icon: 'fa-brands fa-bootstrap',
+      icon: 'ionic',
       showAllSkills: false,
     },
     {
@@ -220,7 +220,7 @@ export class SkillsComponent {
       category: 'DevOps/Cloud',
       level: 'Intermediate',
       proficiency: 50,
-      years: 1,
+      years: 0.6,
       icon: 'fa-brands fa-aws',
       showAllSkills: false,
     },
@@ -261,7 +261,7 @@ export class SkillsComponent {
       level: 'Advanced',
       proficiency: 90,
       years: 2,
-      icon: 'fa-solid fa-code',
+      icon: 'fa-solid fa-file-code',
       showAllSkills: false,
     },
     {
@@ -270,11 +270,20 @@ export class SkillsComponent {
       category: 'Frontend',
       level: 'Advanced',
       proficiency: 80,
-      years: 1.5,
-      icon: 'fa-solid fa-code',
+      years: 1,
+      icon: 'fa-solid fa-wind',
       showAllSkills: false,
     },
-    // add more skills...
+    {
+      id: 18,
+      title: 'Render',
+      category: 'DevOps/Cloud',
+      level: 'Advanced',
+      proficiency: 60,
+      years: 0.6,
+      icon: 'fa-brands fa-cloudflare',
+      showAllSkills: false,
+    },
   ];
 
   // UI state
@@ -373,7 +382,7 @@ export class SkillsComponent {
     {
       title: 'Frontend Mastery',
       description: 'Mastered modern frontend frameworks and tools',
-      skills: [ 'Angular','React', 'Tailwind CSS','SASS'],
+      skills: ['Angular', 'React', 'Tailwind CSS', 'SASS'],
     },
     {
       title: 'Backend Development',
