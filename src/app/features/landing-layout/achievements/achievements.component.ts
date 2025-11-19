@@ -9,7 +9,7 @@ export class AchievementsComponent {
 skills = [
   {
     title: 'Full-Stack Expertise',
-    description: 'Proficient in MERN stack with hands-on experience in building scalable applications'
+    description: 'Proficient in MERN & MEAN stack with hands-on experience in building scalable applications'
   },
   {
     title: 'Problem Solver',

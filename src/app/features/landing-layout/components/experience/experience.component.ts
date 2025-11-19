@@ -186,7 +186,7 @@ export class ExperienceComponent {
       icon: '🤝',
       title: 'Team Collaboration',
       description:
-        'Working effectively in cross-functional development teams using Agile methodologies, Git workflows, and CI/CD pipelines.',
+        'Working effectively in cross-functional development teams using Agile methodologies and Git workflows.',
     },
     {
       icon: '🧩',
