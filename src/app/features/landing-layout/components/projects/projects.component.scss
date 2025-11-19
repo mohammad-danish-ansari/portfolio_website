@@ -312,6 +312,33 @@
       margin-bottom: 4rem;
     }
   }
+ 
+}
+@media (max-width:320px){
+  .dropdown{
+    span{
+       font-size: 0.9rem !important;
+    }
+    i{
+      font-size: 0.9rem;
+    }
+  }
+  .dropdown-content .all_tech{
+    font-size: 0.9rem !important;
+  }
+}
+@media (max-width:375px){
+  .dropdown{
+    span{
+       font-size: 0.9rem !important;
+    }
+    i{
+      font-size: 0.9rem;
+    }
+  }
+  .dropdown-content .all_tech{
+    font-size: 0.9rem !important;
+  }
 }
 .btn-orange{
   font-size: 0.94rem;

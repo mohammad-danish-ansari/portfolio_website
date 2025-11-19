@@ -30,7 +30,7 @@
                         </button>
 
                         <div class="dropdown-content border-bottom rounded" [class.show]="isOpen">
-                            <a class="border-bottom rounded" (click)="selectTech('')">All Technologies</a>
+                            <a class="border-bottom rounded all_tech" (click)="selectTech('')">All Technologies</a>
                             <a class="border-bottom rounded" *ngFor="let tech of technologies"
                                 (click)="selectTech(tech)">
                                 {{ tech }}

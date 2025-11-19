@@ -1,0 +1,27 @@
+<div class="preloader" *ngIf="showLoader">
+  <div class="container text-center">
+
+    <div class="icon-box mb-4">
+      <i [ngClass]="currentIcon"></i>
+    </div>
+
+    <!-- Title -->
+    <h1 class="welcome-text">Welcome to</h1>
+    <h1 class="name-text">Danish Portfolio</h1>
+
+    <p class="role">Full-Stack Developer</p>
+
+    <!-- Status -->
+    <div class="status">
+      <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+      {{ statusMessage }}
+    </div>
+
+    <!-- Loading Bar -->
+    <div class="progress mt-4 loading-bar">
+      <div class="progress-bar" [style.width.%]="progress"></div>
+    </div>
+
+    <p class="percent-text">{{ progress }}% Complete</p>
+  </div>
+</div>

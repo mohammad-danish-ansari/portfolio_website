@@ -51,6 +51,7 @@ export class ProjectsComponent {
     'SCSS',
     'SASS',
     'Bootstrap',
+    'Tailwind CSS',
     'Ionic',
     'Angular',
     'React',
@@ -193,7 +194,7 @@ export class ProjectsComponent {
         'A scalable e-commerce platform built using React and modular component architecture. Implements Razorpay payment gateway, optimized product filtering, responsive UI, and real-time inventory management. Backend developed with Node.js/Express and MongoDB, featuring JWT authentication and end-to-end REST APIs.',
       techStack: [
         'React',
-        'Bootstrap',
+        'Tailwind CSS',
         'SCSS',
         'SASS',
         'CSS',

@@ -12,6 +12,7 @@ import { HeaderComponent } from './features/shared/header/header.component';
 import { FooterComponent } from './features/shared/footer/footer.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmDeleteComponent } from './features/confirm-delete/confirm-delete.component';
+import { PreloaderComponent } from './features/preloader/preloader.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ConfirmDeleteComponent } from './features/confirm-delete/confirm-delete
     HeaderComponent,
     FooterComponent,
     ConfirmDeleteComponent,
+    PreloaderComponent,
   ],
   imports: [
     BrowserAnimationsModule,
