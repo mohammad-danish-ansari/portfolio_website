@@ -55,6 +55,7 @@ export class ProjectsComponent {
     'Ionic',
     'Angular',
     'React',
+    'Next.js',
     'TypeScript',
     'JavaScript',
     'Node.js',
@@ -213,6 +214,35 @@ export class ProjectsComponent {
       ],
       codeLink: 'https://github.com/yourusername/portfolio',
       liveDemo: '',
+    },
+    {
+      id: 7,
+      name: 'GKC Klinica',
+      role: 'Frontend Developer',
+      description:
+        'A scalable healthcare and wellness management platform built using Next.js with a modular, role-based architecture. The application supports multiple user roles including User, Doctor, Admin, and Yoga Teacher, enabling seamless appointment booking, video consultations, membership management, and blood donation services.The backend is developed using NestJS with PostgreSQL, implementing JWT-based authentication, secure role-based access control, and well-structured REST APIs for smooth data flow and scalability.',
+      techStack: [
+        'Next.js',
+        'Tailwind CSS',
+        'SCSS',
+        'SASS',
+        'CSS',
+        'HTML',
+        'Nest.js',
+        'Express.js',
+        'PostgreSql',
+      ],
+      images: [
+        '../../../../../assets/images/gkcklinica/login.png',
+        '../../../../../assets/images/gkcklinica/admin01.png',
+        '../../../../../assets/images/gkcklinica/admin02.png',
+        '../../../../../assets/images/gkcklinica/admin03.png',
+        '../../../../../assets/images/gkcklinica/user01.png',
+        '../../../../../assets/images/gkcklinica/user02.png',
+        '../../../../../assets/images/gkcklinica/user03.png',
+      ],
+      codeLink: 'https://github.com/yourusername/portfolio',
+      liveDemo: 'https://www.gkcklinica.com/',
     },
   ];
 

@@ -91,6 +91,7 @@ $card-bg: #ffffff;
       height:44px;
       border-radius:10px;
       background: linear-gradient(180deg, #ff8c1a, #ff6b00);
+      // background: linear-gradient(180deg, #ff850b, #f06b0c);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -134,7 +135,11 @@ $card-bg: #ffffff;
   }
 }
 
-
+.nextjs-icon {
+  display: block;
+  width: 2.2rem; 
+  height:2.2rem;
+}
 .skill-card:hover {
    box-shadow:
     0 15px 30px rgba(255, 122, 0, 0.4),

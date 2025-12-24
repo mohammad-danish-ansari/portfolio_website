@@ -25,11 +25,10 @@ interface Skill {
   title: string;
   category: Category;
   level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
-  proficiency: number; // 0-100
-  years: number; // years of experience
-  icon?: string; // fontawesome class
-  tags?: string[]; // optional small tags
-  description?: string;
+  proficiency: number;
+  years: number;
+  icon?: string; // fontawesome class OR key
+  iconType?: 'fa' | 'svg' | 'ionic';
   showAllSkills?: boolean;
 }
 @Component({
@@ -131,7 +130,7 @@ export class SkillsComponent {
       level: 'Advanced',
       proficiency: 80,
       years: 2.2,
-       icon: 'fa-brands fa-css3-alt',
+      icon: 'fa-brands fa-css3-alt',
       showAllSkills: false,
     },
     {
@@ -141,7 +140,7 @@ export class SkillsComponent {
       level: 'Advanced',
       proficiency: 80,
       years: 2.2,
-       icon: 'fa-brands fa-css3-alt',
+      icon: 'fa-brands fa-css3-alt',
       showAllSkills: false,
     },
     {
@@ -176,6 +175,17 @@ export class SkillsComponent {
     },
     {
       id: 8,
+      title: 'Next JS',
+      category: 'Frontend',
+      level: 'Advanced',
+      proficiency: 80,
+      years: 0.6,
+      iconType: 'svg',
+      icon: 'nextjs',
+      showAllSkills: false,
+    },
+    {
+      id: 9,
       title: 'Angular',
       category: 'Frontend',
       level: 'Advanced',
@@ -185,7 +195,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 9,
+      id: 10,
       title: 'Node.js',
       category: 'Backend',
       level: 'Advanced',
@@ -195,7 +205,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 10,
+      id: 11,
       title: 'Express.js',
       category: 'Backend',
       level: 'Advanced',
@@ -205,7 +215,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 11,
+      id: 12,
       title: 'MongoDB',
       category: 'Database',
       level: 'Advanced',
@@ -215,7 +225,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 12,
+      id: 13,
       title: 'AWS',
       category: 'DevOps/Cloud',
       level: 'Intermediate',
@@ -225,7 +235,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 13,
+      id: 14,
       title: 'Git',
       category: 'Tools',
       level: 'Advanced',
@@ -235,7 +245,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 14,
+      id: 15,
       title: 'GitHub',
       category: 'Tools',
       level: 'Advanced',
@@ -245,7 +255,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 15,
+      id: 16,
       title: 'Postman',
       category: 'Tools',
       level: 'Advanced',
@@ -255,7 +265,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 16,
+      id: 17,
       title: 'TypeScript',
       category: 'Languages',
       level: 'Advanced',
@@ -265,7 +275,7 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 17,
+      id: 18,
       title: 'Tailwind CSS',
       category: 'Frontend',
       level: 'Advanced',
@@ -275,15 +285,26 @@ export class SkillsComponent {
       showAllSkills: false,
     },
     {
-      id: 18,
+      id: 19,
       title: 'Render',
       category: 'DevOps/Cloud',
       level: 'Advanced',
-      proficiency: 60,
+      proficiency: 80,
       years: 0.6,
       icon: 'fa-brands fa-cloudflare',
       showAllSkills: false,
     },
+{
+  id: 20,
+  title: 'Vercel',
+  category: 'DevOps/Cloud',
+  level: 'Advanced',
+  proficiency: 80,
+  years: 0.6,
+  iconType: 'svg',  
+  icon: 'vercel',    
+  showAllSkills: false,
+}
   ];
 
   // UI state

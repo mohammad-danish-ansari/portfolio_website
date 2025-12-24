@@ -52,11 +52,28 @@
                 <div class="d-flex justify-content-between align-items-start mb-3">
                     <div class="icon-wrap">
                         <div class="icon-bg">
-                            <i [class]="s.icon" aria-hidden="true"></i>
+                            <i *ngIf="!s.iconType || s.iconType === 'fa'" [class]="s.icon"></i>
                             <!-- <img *ngIf="s.icon === 'ionic'" src="../../../../../assets/logo/reaction.png"
                                 width="20" height="20" alt="Ionic Logo" class="ionic" /> -->
-                                <ion-icon *ngIf="s.icon === 'ionic'" name="logo-ionic"></ion-icon>
-                                
+                            <ion-icon *ngIf="s.icon === 'ionic'" name="logo-ionic"></ion-icon>
+                            <svg class="nextjs-icon" *ngIf="s.iconType === 'svg' && s.icon === 'nextjs'" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" width="22" height="22">
+                                <defs>
+                                    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#ff8c1a" />
+                                        <stop offset="100%" stop-color="#ff6b00" />
+                                    </linearGradient>
+                                </defs>
+
+                                <circle cx="256" cy="256" r="256" fill="url(#orangeGrad)" />
+
+                                <path fill="white"
+                                    d="M141.2 144h53.6l72.8 118.4V144h43.6v224h-51.6l-74.8-122.8V368h-43.6V144zm188.4 164.8l39.2 59.2c20-15.6 32.8-40 32.8-67.2 0-39.2-25.6-72.4-61.6-84l-10.4 92z" />
+                            </svg>
+                            <svg width="22" height="22" *ngIf="s.iconType === 'svg' && s.icon === 'vercel'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="white" d="M12 2L22 20H2L12 2z" />
+                            </svg>
+
                         </div>
                     </div>
                     <div class="level-pill text-muted">{{ s.level }}</div>
@@ -203,3 +220,10 @@
 </div>
 
 <!--  build end================================ -->
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
+    <circle cx="256" cy="256" r="256" fill="white" />
+    <path fill="black"
+        d="M141.2 144h53.6l72.8 118.4V144h43.6v224h-51.6l-74.8-122.8V368h-43.6V144zm188.4 164.8l39.2 59.2c20-15.6 32.8-40 32.8-67.2 0-39.2-25.6-72.4-61.6-84l-10.4 92z" />
+</svg>
